@@ -11,13 +11,13 @@ const Header = () => {
         <div className="flex gap-5 justify-between items-center">
           <Link href="/">
             <Image
-            width={100}
-            height={100}
-            src={logo}
-            alt="logo"
-            style={{ maxWidth: "300px", maxHeight: "300px" }}
-          /></Link>
-          
+              width={100}
+              height={100}
+              src={logo}
+              alt="logo"
+              style={{ maxWidth: "300px", maxHeight: "300px" }}
+            /></Link>
+
           <div className="nav flex gap-14">
             <Link className="text-lg font-medium" href="/">
               About us
@@ -58,12 +58,14 @@ const Header = () => {
 
       <header className="responsive-header bg-white block lg:hidden px-5 py-10">
         <div className="flex gap-3 justify-between">
-          <Image
-            className="w-20 h-auto"
-            src={logo}
-            alt="logo"
-            style={{ maxWidth: "300px", maxHeight: "300px" }}
-          />
+          <Link href="/">
+            <Image
+              className="w-20 h-auto"
+              src={logo}
+              alt="logo"
+              style={{ maxWidth: "300px", maxHeight: "300px" }}
+            />
+          </Link>
           <div className="cursor-pointer">
             <svg
               width="28"
