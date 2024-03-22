@@ -1,0 +1,20 @@
+#add-package {
+  form {
+    input[type="checkbox"] {
+      &:checked + label {
+        @apply text-skin-hover;
+      }
+    }
+
+    // .checkbox-wrap
+    // {
+    //     &.checkbox-active
+    //     {
+    //         input[type="number"]
+    //         {
+
+    //         }
+    //     }
+    // }
+  }
+}

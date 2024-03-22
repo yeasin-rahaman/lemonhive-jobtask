@@ -1,0 +1,120 @@
+body
+{
+    &.modal-open 
+    {
+        @apply
+        h-screen
+        overflow-y-hidden;
+    }
+}
+
+.modal-wrap
+{
+    width: calc(100vw - 128px);
+    height: 100vh;
+
+    @apply
+    fixed
+    top-0
+    right-0
+    z-50
+    hidden;
+
+    @media (max-width: 768px) 
+    {
+        @apply
+        w-screen;
+    }
+
+    .modal-content
+    {
+        overflow-y: scroll;
+
+        @apply
+        absolute
+        top-1/2
+        right-0
+        -translate-y-1/2
+        scale-0
+        w-full
+        h-full
+        bg-skin-base
+        z-50
+        invisible
+        opacity-0
+        origin-center
+        transition-all;
+
+
+
+        @media (max-width: 768px) 
+        {
+            width: 100%;
+        }
+    }
+    .modal-closer
+    {
+        @apply
+        w-12 
+        h-12 
+        grid 
+        place-items-center 
+        rounded-full
+        transition-all;
+        @media (max-width: 768px) 
+        {
+            @apply
+            absolute
+            top-10
+            right-8;
+        }
+
+        &:hover
+        {
+            @apply
+            bg-skin-button-inverted-hover;
+        }
+    }
+    .modal-scrim 
+    {
+        @apply
+        absolute
+        inset-0
+        bg-skin-base-inverted
+        opacity-60;
+    }
+
+    &.active-modal
+    {
+        @apply
+        block;
+
+        .modal-content
+        {
+            @apply
+            scale-100
+            visible
+            opacity-100;
+
+            
+        }
+    }
+
+    &.delete-confirmation
+    {
+        background-color: rgba(var(--color-boxshadow-muted), 0.05);
+        
+    }
+}
+
+.loading-screen
+{
+    background-color: rgba(var(--color-boxshadow-muted), 0.15);
+    // background-color: rgba(0, 0, 0, 0.05); 
+    display: none;
+
+    &.active
+    {
+        display: flex;
+    }
+}

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./abstracts/all.scss";
+@import "./core/all.scss";
+@import "./components/all.scss";
+// @import "./layout/all.scss";
+// @import "./pages/main";
+
+// @import "./pages/profile";
+
+// @import "./pages/add-package";

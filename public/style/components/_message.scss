@@ -1,0 +1,49 @@
+.message
+{
+    &.active
+    {
+        display: block;
+    }
+
+    &.hide
+    {
+        display: none;
+    }
+}
+
+.toast
+{
+    @apply 
+    fixed
+    top-20
+    left-1/2
+    -translate-x-1/2
+    translate-y-2
+
+    flex
+    items-center
+    justify-between
+    min-w-[200px]
+    max-w-xs
+    w-full
+    py-3
+    px-4
+    bg-skin-base
+    border 
+    border-skin-muted
+    rounded-lg
+    shadow-md
+    z-50
+    invisible
+    opacity-0
+    transition-all
+    ;
+
+    &.active
+    {
+        @apply
+        visible
+        opacity-100
+        translate-y-0;
+    }
+}

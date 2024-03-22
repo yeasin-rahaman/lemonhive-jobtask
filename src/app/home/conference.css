@@ -1,0 +1,15 @@
+@media (max-width: 1024px) {
+  :where(.timeline > li) {
+    grid-template-columns: 1fr 6fr;
+  }
+
+  .timeline-middle {
+    grid-column-start: 1;
+  }
+  .timeline-vertical .timeline-end {
+    grid-column-start: 2;
+  }
+  :where(.timeline-vertical > li > hr):last-child {
+    grid-column-start: 1;
+  }
+}

@@ -1,0 +1,101 @@
+html {
+  // -webkit-overflow-scrolling: touch;
+  // overflow-y: scroll;
+  max-height: 100%;
+  overflow-x: clip;
+}
+body {
+  overflow-x: clip;
+  background-color: #fff;
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1368px;
+  }
+}
+
+// *,
+// ::before,
+// ::after
+// {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//     // transition: ;
+// }
+
+// ::selection
+// {
+
+// }
+
+/** scrollbar **/
+
+// *  /*    firefox   */
+// {
+//     scrollbar-width: thin;
+//     scrollbar-color: transparent transparent;
+
+//     &:hover
+//     {
+//         scrollbar-width: thin;
+//         scrollbar-color: rgb(36, 36, 36) transparent;
+//     }
+
+// }
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar
+{
+  width: 12px;
+
+}
+
+*::-webkit-scrollbar-track
+{
+    background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background-color: rgb(169, 169, 169);
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+
+    &:hover
+    {
+        background-color: rgb(98, 98, 98);
+        border-radius: 10px;
+        border: 2px solid #f1f1f1;
+    }
+
+  
+}
+
+// /* Buttons */
+// ::-webkit-scrollbar-button:single-button {
+//   background-color: #bbbbbb;
+//   display: block;
+//   border-style: solid;
+//   height: 16px;
+//   width: 12px;
+// }
+// /* Up */
+// ::-webkit-scrollbar-button:single-button:vertical:decrement {
+//   border-width: 0 8px 8px 8px;
+//   border-color: transparent transparent #555555 transparent;
+// }
+
+// ::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+//   border-color: transparent transparent #777777 transparent;
+// }
+// /* Down */
+// ::-webkit-scrollbar-button:single-button:vertical:increment {
+//   border-width: 8px 8px 0 8px;
+//   border-color: #555555 transparent transparent transparent;
+// }
+
+// ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+//   border-color: #777777 transparent transparent transparent;
+// }

@@ -1,0 +1,232 @@
+.tooltip-bottom
+{
+    position: relative;
+    width: fit-content;
+    transition: visibility opacity 0.2s ease-in-out;
+
+    &::before
+    {
+        visibility: hidden;
+        opacity: 0;
+        content: attr(data-tooltip);
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        white-space: nowrap;
+        padding: 6px 10px;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        
+        transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
+
+        @apply
+        bg-skin-amplify-inverted
+        text-skin-base-inverted;
+    }
+
+    &::after
+    {
+        visibility: hidden;
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-100%) rotate(270deg);
+        width: 22px;
+        height: 21px;
+        clip-path: polygon(0 0, 50% 50%, 0 100%);
+        transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
+
+        @apply
+        bg-skin-amplify-inverted;
+    }
+
+    &:hover
+    {
+        &::before,
+        &::after
+        {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.tooltip-top
+{
+    position: relative;
+    width: fit-content;
+    transition: visibility opacity 0.2s ease-in-out;
+
+    &::before
+    {
+        visibility: hidden;
+        opacity: 0;
+        content: attr(data-tooltip);
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        white-space: nowrap;
+        padding: 6px 10px;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
+
+        @apply
+        bg-skin-amplify-inverted
+        text-skin-base-inverted;
+    }
+
+    &::after
+    {
+        visibility: hidden;
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-100%) rotate(90deg);
+        width: 22px;
+        height: 21px;
+        clip-path: polygon(0 0, 50% 50%, 0 100%);
+        transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
+
+        @apply
+        bg-skin-amplify-inverted;
+    }
+
+    &:hover
+    {
+        &::before,
+        &::after
+        {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.tooltip-left
+{
+    position: relative;
+    width: fit-content;
+    transition: visibility opacity 0.2s ease-in-out;
+
+    &::before
+    {
+        visibility: hidden;
+        opacity: 0;
+        content: attr(data-tooltip);
+        position: absolute;
+        top: 50%;
+        right: calc(100% + 17px);
+        transform: translateY(-50%);
+        white-space: nowrap;
+        padding: 6px 10px;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
+
+        @apply
+        bg-skin-amplify-inverted
+        text-skin-base-inverted;
+    }
+
+    &::after
+    {
+        visibility: hidden;
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -9px;
+        transform: translateX(-50%) translateY(-50%) rotate(360deg);
+        width: 22px;
+        height: 21px;
+        clip-path: polygon(0 0, 50% 50%, 0 100%);
+        transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
+
+        @apply
+        bg-skin-amplify-inverted;
+    }
+
+    &:hover
+    {
+        &::before,
+        &::after
+        {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.tooltip-right
+{
+    position: relative;
+    width: fit-content;
+    transition: visibility opacity 0.2s ease-in-out;
+
+    &::before
+    {
+        visibility: hidden;
+        opacity: 0;
+        content: attr(data-tooltip);
+        position: absolute;
+        top: 50%;
+        left: calc(100% + 17px);
+        transform: translateY(-50%);
+        white-space: nowrap;
+        padding: 6px 10px;
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
+
+        @apply
+        bg-skin-amplify-inverted
+        text-skin-base-inverted;
+    }
+
+    &::after
+    {
+        visibility: hidden;
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -9px;
+        transform: translateX(50%) translateY(-50%) rotate(180deg);
+        width: 22px;
+        height: 21px;
+        clip-path: polygon(0 0, 50% 50%, 0 100%);
+        transition: visibility opacity 0.2s ease-in-out;
+        z-index: 10;
+
+        @apply
+        bg-skin-amplify-inverted;
+    }
+
+    &:hover
+    {
+        &::before,
+        &::after
+        {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

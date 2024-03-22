@@ -1,0 +1,53 @@
+.collapsible-wrap
+{
+    @apply
+    p-4
+    border 
+    border-skin-muted
+    rounded-sm;
+
+    .collapsible 
+    {
+        @apply
+        flex
+        items-center
+        gap-4
+        font-medium
+        text-skin-base
+        transition-all;
+
+
+        svg 
+        {
+            rotate: 45deg;
+            transition: 0.2s ease-in-out;
+        }
+
+        &:hover 
+        {
+            @apply
+            text-skin-hover;
+        }
+
+        &.active 
+        {
+            @apply
+            text-skin-hover;
+            
+            svg 
+            {
+                rotate: 90deg;
+            }
+
+        }
+    }
+
+    .collapsible-content 
+    {
+        max-height: 0px;
+        overflow-y: hidden;
+        transition: 0.2s ease-in-out;
+
+        
+    }
+}

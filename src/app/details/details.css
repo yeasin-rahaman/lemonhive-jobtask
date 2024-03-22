@@ -1,0 +1,14 @@
+ {
+   {
+    /* .tabs {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 50px;
+  align-items
+} */
+  }
+}
+
+.tab-button:checked {
+  background-color: yellow;
+}

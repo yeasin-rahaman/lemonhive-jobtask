@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --clr-yellow: #FFC93E;
+    --clr-deepBlue: #111D5E;
+    --clr-skyBlue: #2563EB;
+    --clr-deepGray: #617187;
+    --clr-lightGray: #CDCDCD;
+    --clr-ghostWhite: #F9FAFB;
+    --clr-white: #ffffff;
+  }
+}
+html {
+  max-height: 100%;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+  background-color: #fff;
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1368px;
+  }
+}
+/** scrollbar **/
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(169, 169, 169);
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(98, 98, 98);
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../Assets/Fonts/static/Inter-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../Assets/Fonts/static/Inter-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../Assets/Fonts/static/Inter-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../Assets/Fonts/static/Inter-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../Assets/Fonts/static/Inter-Bold.ttf") format("truetype");
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+span,
+pre {
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  -webkit-text-decoration: auto;
+          text-decoration: auto;
+}
+
+.wp-block-post-content a:where(:not(.wp-element-button)) {
+  color: inherit;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.head-1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+}
+
+.head-2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.head-3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.head-4 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.head-5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.body-text1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.body-text2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.caption-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  line-height: 1.6;
+}
+
+.overline-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  h1,
+  .head-1 {
+    font-size: 46px;
+  }
+  h2,
+  .head-2 {
+    font-size: 24px;
+  }
+  h3,
+  .head-3 {
+    font-size: 20px;
+  }
+  h4,
+  .head-4 {
+    font-size: 18px;
+  }
+  h5,
+  .head-5 {
+    font-size: 16px;
+  }
+  p,
+  .body-text1 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  h1,
+  .head-1,
+  h2,
+  .head-2 {
+    font-size: 36px;
+  }
+  h3,
+  .head-3 {
+    font-size: 20px;
+  }
+  h4,
+  .head-4 {
+    font-size: 18px;
+  }
+  h5,
+  .head-5 {
+    font-size: 16px;
+  }
+  p,
+  .body-text1 {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=main.css.map */

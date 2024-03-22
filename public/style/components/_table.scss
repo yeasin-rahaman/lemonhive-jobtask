@@ -1,0 +1,221 @@
+table 
+{
+    tr 
+    {
+        td
+        {
+            position: relative;
+
+
+            .hover-content 
+            {
+                display: none;
+
+                &:checked
+                {
+                    display: grid;
+
+                    & + .content
+                    {
+                        display: none;
+                    }
+                }
+            }
+            .hover-button 
+            {
+                visibility: hidden;
+                opacity: 0;
+
+                @media (max-width: 768px) 
+                {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+        }
+        &:hover
+        {
+            .content
+            {
+                display: none;
+            }
+            .hover-content
+            {
+                display: grid;
+            }
+
+            .hover-button
+            {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        
+    }
+}
+
+
+@media (max-width: 640px)
+{
+    .table-wrap.responsive
+    {
+        thead 
+        {
+            display: none;
+        }
+        tbody 
+        {
+            tr
+            {
+                td 
+                {
+                    width: unset;
+                }
+            }
+        }
+
+        table,
+        table tbody,
+        table tr,
+        table td, 
+        table th 
+        {
+            width: 100%;
+            display: block;
+        }
+
+        table tr
+        {
+            height: unset;
+        }
+
+        table td
+        {
+            position: relative;
+            padding-block: 16px;
+
+            > *
+            {
+                width: 60%;
+                margin-left: auto;
+                text-align: left;
+            }
+
+            .dropdown 
+            {
+                [data-dropdown-btn]
+                {
+                    padding: unset;
+                }
+
+                .dropdown-content
+                {
+                    right: unset;
+                    left: 0;
+                }
+            }
+            
+        }
+
+        table td::before 
+        {
+            content: attr(data-thead);
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            // top: 50%;
+            // transform: translateY(-50%);
+            text-align: left;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            @apply
+            font-normal
+            text-skin-muted
+            whitespace-nowrap;
+        }
+    }
+}
+
+@media (max-width: 1500px)
+{
+    .package-table-wrap.responsive
+    {
+        thead 
+        {
+            display: none;
+        }
+        tbody 
+        {
+            tr
+            {
+                td 
+                {
+                    width: unset;
+                }
+            }
+        }
+
+        table,
+        table tbody,
+        table tr,
+        table td, 
+        table th 
+        {
+            width: 100%;
+            display: block;
+        }
+
+        table tr
+        {
+            height: unset;
+        }
+
+        table td
+        {
+            position: relative;
+            padding-block: 16px;
+
+            > *
+            {
+                width: 60%;
+                margin-left: auto;
+                text-align: left;
+            }
+
+            .dropdown 
+            {
+                [data-dropdown-btn]
+                {
+                    padding: unset;
+                }
+
+                .dropdown-content
+                {
+                    right: unset;
+                    left: 0;
+                }
+            }
+            
+        }
+
+        table td::before 
+        {
+            content: attr(data-thead);
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            // top: 50%;
+            // transform: translateY(-50%);
+            text-align: left;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            @apply
+            font-normal
+            text-skin-muted
+            whitespace-nowrap;
+        }
+    }
+}

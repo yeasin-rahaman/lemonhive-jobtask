@@ -1,0 +1,40 @@
+/* tab */
+.tab-bar,
+.inner-tab-bar,
+.modal-tab-bar
+{
+    &::-webkit-scrollbar 
+    {
+        width: 0px;
+        height: 0px;
+    }
+
+    .tab-button,
+    .inner-tab-button
+    {
+        &.active-tab
+        {
+            @apply
+            border-b-skin-base;
+        }
+    }
+}
+
+.tab-content,
+.inner-tab-content,
+.modal-tab-content
+{
+    @apply
+    hidden;
+
+    &.active-content
+    {
+        @apply
+        flex;
+    }
+}
+
+.inner-tab-content-wrap
+{
+    max-width: 520px;
+}

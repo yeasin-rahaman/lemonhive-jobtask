@@ -1,0 +1,129 @@
+.btn,
+button {
+  cursor: pointer;
+}
+
+.menu-btn {
+  * {
+    pointer-events: none;
+  }
+}
+
+.filled-button {
+  letter-spacing: 0.6px;
+  @apply h-14
+  w-fit
+    px-6
+    pt-[2px]
+    flex
+    items-center
+    justify-center
+    bg-secondary
+    text-[17px]
+    font-bold
+    rounded-md
+    border
+    border-transparent
+    transition
+    hover:bg-transparent
+    hover:border-secondary;
+
+  svg {
+    @apply transition;
+  }
+  &:hover {
+    svg {
+      @apply translate-x-2;
+    }
+  }
+}
+
+// .outline-button
+// {
+//     @apply
+//     h-14
+//     px-4
+//     flex
+//     items-center
+//     justify-center
+//     bg-white
+//     border
+//     border-gray-300
+//     text-gray-600
+//     font-medium
+//     rounded-sm
+//     transition
+//     hover:border-blue-500
+//     hover:text-blue-500;
+// }
+
+.outline-button {
+  @apply h-14
+  w-fit
+    px-6
+    pt-[2px]
+    flex
+    items-center
+    justify-center
+    bg-transparent
+    border 
+    border-secondary
+    text-[17px]
+    font-bold
+    rounded
+    transition
+    hover:bg-secondary
+    hover:border-transparent;
+
+  svg {
+    @apply transition;
+  }
+  &:hover {
+    svg {
+      @apply translate-x-2;
+    }
+  }
+}
+
+.text-button {
+  @apply h-14
+    w-fit
+    flex
+    items-center
+    justify-center
+    bg-transparent
+    text-[17px]
+    font-bold
+    rounded;
+
+  .icon {
+    @apply transition;
+  }
+  &:hover {
+    .icon {
+      @apply translate-x-2;
+    }
+  }
+}
+
+button {
+  &.active-function {
+    @apply bg-secondary;
+
+    svg {
+      path {
+        @apply fill-white;
+      }
+    }
+
+    &:hover {
+      @apply bg-transparent;
+
+      svg {
+        path {
+          @apply fill-white;
+        }
+      }
+    }
+  }
+}

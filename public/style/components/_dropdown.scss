@@ -1,0 +1,227 @@
+/* dropdown */
+.dropdown {
+  position: static;
+
+  &.hover-dropdown
+  {
+    .dropdown-content {
+      transition: all 50ms ease-in-out;
+      transition-delay: 0.25s;
+      // transition:  100ms ease-in-out;
+    }
+    &:hover{
+      .dropdown-content {
+        transition: all 100ms ease-in-out;
+        
+        @apply 
+        visible
+        scale-100
+        opacity-100
+        translate-y-0;
+      }
+    }
+  }
+  
+  
+  .dropdown-content {
+    // box-shadow: 0px 6px 26px rgba(109, 117, 124, 0.2);
+    @apply invisible
+        shadow-lg
+        border
+        rounded
+        opacity-0
+        translate-y-8
+        transition-all;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      right: 30px;
+      border-color: rgba(0, 0, 0, 0.15);
+      border: solid transparent;
+      border-bottom-color: #fff;
+      border-width: 9px;
+      /* margin-left: -10px; */
+
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: calc(30px + 1px);
+
+      top: -16px;
+      width: 0;
+      height: 0;
+      border: solid transparent;
+      border-width: 8px;
+      border-bottom-color: rgba(0, 0, 0, 0.15);
+      z-index: 0;
+    }
+
+    &.overlap-content {
+      &::before,
+      &::after {
+        all: unset;
+      }
+    }
+  }
+
+  &:focus-within {
+    .dropdown-content {
+      @apply invisible
+        opacity-0;
+    }
+  }
+
+  &.menu-open {
+    .dropdown-content {
+      @apply visible
+            opacity-100
+            translate-y-0;
+    }
+  }
+
+  /* notification dropdown */
+  &.notification {
+    .dropdown-content {
+      box-shadow: 2px 6px 32px rgba(149, 157, 165, 0.15);
+
+      @apply translate-x-80
+            translate-y-0;
+    }
+
+    &.menu-open {
+      .dropdown-content {
+        @apply visible
+                opacity-100
+                translate-x-0;
+      }
+    }
+  }
+
+  /* responsive sidebar menu */
+  &.sidebar-menu {
+    .dropdown-content {
+      box-shadow: 2px 6px 32px rgba(149, 157, 165, 0.15);
+
+      @apply -translate-x-80
+            translate-y-0;
+    }
+
+    &.menu-open {
+      .dropdown-content {
+        @apply translate-x-0;
+      }
+    }
+  }
+
+  &.add-bar {
+    .dropdown-content {
+      &::before {
+        right: 18px;
+      }
+
+      &::after {
+        right: calc(18px + 1px);
+      }
+    }
+  }
+
+  &.options {
+    .dropdown-content {
+      &::before {
+        right: 20px;
+      }
+      &::after {
+        right: calc(20px + 1px);
+      }
+    }
+  }
+
+  &.chat-dropdown {
+    @apply fixed
+        bottom-3 
+        right-6 
+        -translate-y-1/2;
+
+    @media (max-width: 640px) {
+      right: unset;
+      left: 24px;
+    }
+
+    button[data-dropdown-btn] {
+      .chat-icon {
+        @apply visible
+                opacity-100
+                transition-all;
+      }
+      .close-icon {
+        @apply invisible
+                opacity-0
+                transition-all;
+      }
+    }
+
+    .dropdown-content {
+      bottom: calc(100% + 10px);
+      @apply absolute
+            right-0;
+
+      &::before {
+        top: unset;
+        @apply rotate-180
+                -bottom-4
+                right-5;
+      }
+      &::after {
+        top: unset;
+        right: calc(20px + 1px);
+        @apply rotate-180
+                -bottom-4;
+      }
+
+      @media (max-width: 640px) {
+        overflow-y: scroll;
+        height: 65vh;
+        right: unset;
+        left: 0px;
+
+        &::before,
+        &::after {
+          all: unset;
+        }
+      }
+    }
+
+    &.menu-open {
+      button[data-dropdown-btn] {
+        @apply mr-auto;
+
+        .chat-icon {
+          @apply invisible
+                    opacity-0;
+        }
+        .close-icon {
+          @apply visible
+                    opacity-100;
+        }
+      }
+    }
+  }
+}
+
+// a
+// {
+//     svg path
+//     {
+//         transition: 0.15s ease-in-out;
+//     }
+
+//     &:hover svg path
+//     {
+//         @apply
+//         fill-blue-500;
+//     }
+// }

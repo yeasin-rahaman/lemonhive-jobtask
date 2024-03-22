@@ -1,0 +1,13 @@
+.selection-bar {
+  button.selection-button {
+    @apply translate-x-8
+        invisible
+        opacity-0;
+
+    &.active {
+      @apply translate-x-0
+            visible
+            opacity-100;
+    }
+  }
+}
