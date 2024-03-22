@@ -44,7 +44,7 @@ const Tabs = () => {
 
   console.log(conferenceID, "con"); // Output: freezing-edge-2020
   console.log(conferenceDate, "date"); // Output: 
-  
+
   const [tabItems, setTabItems] = useState([
     { id: "organizer-tab-button", htmlFor: "organizer-tab", name: "Organizer" },
     { id: "speakers-tab-button", htmlFor: "speakers-tab", name: "Speakers" },
@@ -197,10 +197,10 @@ const Tabs = () => {
               </label>
             ))}
           </div>
+          <div className="">
+            <div className="tab-contents">
+              {tabItems.map((tabItem, index) => (
 
-          <div className="tab-contents">
-            {tabItems.map((tabItem, index) => (
-              <div className="">
                 <label
                   key={index} // Added key prop
                   id={tabItem.id}
@@ -233,17 +233,10 @@ const Tabs = () => {
                     {tabItem.name}
                   </div>
                 </label>
-                {/* <input
-                  type="radio"
-                  name="my_tabs_1"
-                  id={tabItem.htmlFor}
-                  role="tab"
-                  className="tab hidden"
-                  aria-label="Organizer"
-                /> */}
-              </div>
-            ))}
 
+
+              ))}
+            </div>
             {/* {details.map((detail, index) => (
               <div></div>
             ))} */}
@@ -273,6 +266,7 @@ const Tabs = () => {
                       // src={tabContentImg}
                       width={144}
                       height={144}
+                      alt=""
                     />
                     <div className="">
                       <h4 className="head-3 !font-bold mb-5">
@@ -309,6 +303,7 @@ const Tabs = () => {
                       // src={speakersImg}
                       width={144}
                       height={144}
+                      alt=""
                     />
                     <div className="w-full">
                       <div className="flex gap-3 items-center justify-between mb-5">
@@ -403,7 +398,9 @@ const Tabs = () => {
                 className="tab-content p-5 md:p-10 bg-[#F9FAFB] "
               >
                 {schedules.map((schedule, index) => (
-                  <div className="bg-ctWhite rounded-md p-6 ">
+                  <div className="bg-ctWhite rounded-md p-6 "
+
+                    key={index}>
                     <div className="w-full">
                       <div className="flex gap-3 items-center justify-between mb-5">
                         <h4 className="head-3 !font-bold ">{schedule.day}</h4>
@@ -412,7 +409,8 @@ const Tabs = () => {
                       {schedule.intervals.map((interval, index) => (
                         <p key={index} className="body-text2">
                           {interval.sessions.map((session, index) => (
-                            <li>{session.type}</li>
+                            <li key={index}
+                            >{session.type}</li>
                           ))}
                           Duration:
                           {interval.begin}-{interval.end}{" "}
@@ -451,6 +449,7 @@ const Tabs = () => {
                       // src={sponsorsImg}
                       width={144}
                       height={144}
+                      alt=""
                     />
                     <div className="">
                       <h4 className="head-3 !font-bold mb-5">{sponsor.name}</h4>
